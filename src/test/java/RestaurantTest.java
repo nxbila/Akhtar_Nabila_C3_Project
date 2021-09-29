@@ -77,28 +77,6 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    //<<<<<<<<<<<<<<<<<<<<<<<TOTAL >>>>>>>>>>>>>>>>>>>>>>>>>>>>
-    @Test
-    public void calculate_total_amount_should_increase_when_new_item_is_clicked() {
-        List<String> select = new ArrayList<>();
-        select.add("Sweet corn soup");
-        select.add("Vegetable lasagne");
-        assertEquals(119 + 269, restaurant.calculateTotal(select));
-    }
 
-    @Test
-    public void calculate_total_amount_should_return_total_value_when_one_item_removed() {
-        List<String> select = new ArrayList<>();
-        select.add("Sweet corn soup");
-        assertEquals(119, restaurant.calculateTotal(select));
-    }
-
-    @Test
-    public void when_no_item_selected_must_return_0() {
-        List<String> select = new ArrayList<>();
-        assertEquals(0, restaurant.calculateTotal(select));
-    }
-
-    //<<<<<<<<<<<<<<<<<<<<<<<TOTAL>>>>>>>>>>>>>>>>>>>>>>>>>
 }
 

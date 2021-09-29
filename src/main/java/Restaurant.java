@@ -20,7 +20,7 @@ public class Restaurant {
     public boolean isRestaurantOpen() {
 
         //DELETE ABOVE STATEMENT AND WRITE CODE HERE
-        if ((getCurrentTime().isAfter(openingTime)) && (getCurrentTime().isBefore(closingTime))){
+        if (((getCurrentTime().equals(openingTime))||(getCurrentTime().isAfter(openingTime)) )&& (getCurrentTime().isBefore(closingTime))){
             return true;
         }
         else{
@@ -70,12 +70,7 @@ public class Restaurant {
         return name;
     }
 
-    public int calculateTotal(List<String> select){
-        int total = 0;
-        for(String selectedItem: select){
-            total += findItemByName(selectedItem).getPrice();
-        }
-        return total;
+
     }
 
-}
+
