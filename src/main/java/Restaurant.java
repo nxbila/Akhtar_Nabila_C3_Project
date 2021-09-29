@@ -70,4 +70,12 @@ public class Restaurant {
         return name;
     }
 
+    public int calculateTotal(List<String> select){
+        int total = 0;
+        for(String selectedItem: select){
+            total += findItemByName(selectedItem).getPrice();
+        }
+        return total;
+    }
+
 }
